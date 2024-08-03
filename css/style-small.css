@@ -1,12 +1,11 @@
-@media screen and (min-width: 1041px) {
-    /****** General ***********/
+@media screen and (max-width: 1040px) {
+/****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
 }
 
 html {
-    min-width: 1024px;
-    max-width: 1440px;
+    min-width: 375px;
     margin: 0 auto;
 }
 
@@ -43,7 +42,8 @@ h1, h2, h3 {
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
+    width: 100%;
 }
 
 h1, h2 {
@@ -77,16 +77,20 @@ ul {
 
 .header_nav {
     display: flex;
-    align-items: center;
-    padding: 15px 15px;
+    flex-direction: column;
+    align-items:end;
+    justify-content: start;
 }
 
 .logo {
-    width: 200px;
     padding-top: 30px;
-    margin-left: 45%;
     gap: 10px;
     z-index: 2;
+}
+
+.logo img {
+    width: 100px;
+    object-fit: fill;
 }
 
 .nav_link {
@@ -111,6 +115,7 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+    text-align: center;
 }
 
 /*CARDS*/
@@ -133,7 +138,7 @@ a {
 /****** Hebergements And Populaires ***********/
 
 .hebergements-and-populaires {
-    margin-top: -90px;
+    margin-top: -50px;
     display: flex;
     justify-content: space-between;
 }
@@ -168,7 +173,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 48%;
+    width: 100%;
 }
 
 .hebergements-cards .card {
@@ -196,7 +201,7 @@ a {
 }
 
 .hebergements-cards a{
-    width:45%;
+    width:100%;
 }
 
 .hebergements-cards .card-content {
@@ -219,7 +224,7 @@ a {
     padding: 5px;
     margin: 0px;
 }
-    
+
 
 /*ACTIVITES*/
 
@@ -231,7 +236,7 @@ a {
 
 .activites-cards {
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
@@ -260,7 +265,7 @@ a {
 }
 
 .activites-cards a {
-    width:22%
+    width:100%;
 }
 
 /*FOOTER*/
@@ -268,7 +273,6 @@ a {
     background-color: var(--main-bg-color);
     margin-top: 50px;
     padding-top: 10px;
-    padding-left: 20px;
     border-radius: 20px;
 }
 
@@ -284,18 +288,25 @@ a {
 
 .footer_container_text {
     padding-left: 20px;
-    height: 250px;
-    width : 45%;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    width : 100%;
+    text-align: justify;
 }
 
 .footer_container_links {
     padding-left: 20px;
-    height: 250px;
-    width : calc(50% - 250px);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer_container_photo {
-    width: 250px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     height: 250px;
     margin-bottom: 20px;
 }
